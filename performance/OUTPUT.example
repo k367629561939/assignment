@@ -1,0 +1,40 @@
+          /\      |‾‾| /‾‾/   /‾‾/
+     /\  /  \     |  |/  /   /  /
+    /  \/    \    |     (   /   ‾‾\
+   /          \   |  |\  \ |  (‾)  |
+  / __________ \  |__| \__\ \_____/ .io
+
+     execution: local
+        script: .\performance\updateUser.test.js
+        output: -
+
+     scenarios: (100.00%) 1 scenario, 20 max VUs, 2m30s max duration (incl. graceful stop):
+              * ramping_arrival: Up to 10.00 iterations/s for 2m0s over 2 stages (maxVUs: 5-20, gracefulStop: 30s)
+
+
+     ✓ is status 200
+
+     █ setup
+
+     checks.........................: 100.00% ✓ 899      ✗ 0
+     data_received..................: 37 MB   305 kB/s
+     data_sent......................: 136 kB  1.1 kB/s
+     dropped_iterations.............: 1       0.008316/s
+     http_req_blocked...............: avg=276.73µs min=0s       med=0s       max=63.31ms p(90)=0s       p(95)=0s
+     http_req_connecting............: avg=144.11µs min=0s       med=0s       max=27.64ms p(90)=0s       p(95)=0s
+     http_req_duration..............: avg=269.98ms min=144ms    med=253.66ms max=1.4s    p(90)=434.84ms p(95)=446.95ms
+       { expected_response:true }...: avg=269.98ms min=144ms    med=253.66ms max=1.4s    p(90)=434.84ms p(95)=446.95ms
+     http_req_failed................: 0.00%   ✓ 0        ✗ 899
+     http_req_receiving.............: avg=4.16ms   min=0s       med=2.5ms    max=93.35ms p(90)=4.75ms   p(95)=5.8ms
+     http_req_sending...............: avg=318.13µs min=0s       med=0s       max=7.13ms  p(90)=736.34µs p(95)=802.22µs
+     http_req_tls_handshaking.......: avg=124.37µs min=0s       med=0s       max=34.15ms p(90)=0s       p(95)=0s
+     http_req_waiting...............: avg=265.5ms  min=140.39ms med=250.13ms max=1.39s   p(90)=432.44ms p(95)=443.31ms
+     http_reqs......................: 899     7.475731/s
+     iteration_duration.............: avg=270.29ms min=0s       med=253.89ms max=1.4s    p(90)=435.15ms p(95)=447.26ms
+     iterations.....................: 899     7.475731/s
+     vus............................: 2       min=0      max=5
+     vus_max........................: 6       min=5      max=6
+
+                                                                                                                                                  
+running (2m00.3s), 00/06 VUs, 899 complete and 0 interrupted iterations                                                                           
+ramping_arrival ✓ [======================================] 00/06 VUs  2m0s  10.00 iters/s 
